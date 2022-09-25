@@ -5,19 +5,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class No10871 {
+public class No1110 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int n,x,a;
-		 n = Integer.parseInt(st.nextToken());
-		 x= Integer.parseInt(st.nextToken());
-		st = new StringTokenizer(br.readLine());
-		for(int i=1; i<=n; i++) {
-			 a = Integer.parseInt(st.nextToken());
-			if(a/x==0) {
-				System.out.print(a+" ");
+		int a = Integer.parseInt(st.nextToken());
+		int c = 0;
+		int a1 = a;
+		while(true) {
+			a = ((a % 10) * 10) + (((a/10) + (a % 10)) % 10);
+			c++;
+			if(a1 == a) {
+				break;
 			}
 		}
+		System.out.println(c);
 	}
 }
