@@ -26,3 +26,4 @@ public class No2562 {
 		System.out.println(idx);
 	}
 }
+
